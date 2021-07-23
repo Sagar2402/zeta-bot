@@ -40,6 +40,7 @@ intents:
   - goodbye
   - affirm
   - deny
+  - buy
   - mood_great
   - mood_unhappy
   - bot_challenge
@@ -65,6 +66,7 @@ intents:
   - non_insurance
   - buy_insurance
   - register_appointment
+  - payment_issues
 
 responses:
   utter_greet:
@@ -104,22 +106,25 @@ responses:
   - text: "Please enter your name"
 
   utter_ask_age:
-  - text: "How old are you?"
+  - text: "Please enter your age (Numeric)"
 
   utter_ask_gender:
-  - text: "and gender..? (M/F)"
-
-  utter_ask_place:
-  - text: "Where are you from?"
-
-  utter_ask_pre_medical:
-  - text: "Any existing medical issues?"
+  - text: "Please enter your gender (M/F)"
 
   utter_iamabot:
   - text: "I am a bot, powered by Zeta."
 
+  utter_ask_place:
+  - text: "Please Enter your City?"
+
+  utter_ask_pre_medical:
+  - text: "Do you have any existing medical issues?"
+
   utter_bajaj_finserv:
   - text: "We are an insurance company"
+
+  utter_payment_issues:
+  - text: "Kindly mail us at customerservice@bajaj.finserv.org"
 
   utter_do_you_have_insurance:
   - text: "Do you have an insurance?"
@@ -140,49 +145,97 @@ responses:
   - text: "There are two option:\nBajaj Finserv EMI Card : https://www.bajajfinservhealth.in/emi-network-health-emi-card?loginRequired=true \nBajaj  Finserv Health EMI Card : https://www.bajajfinservhealth.in/emi-network-health-emi-card"
 
   utter_diabetes_care_basic:
-  - text: "It includes : \nDoctor Consultations \nLab Benefit with Reimbursement upto Rs. 1000\nNetwork discounts \nTeleconsultation\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/diabetes-care-basic"
+  - text: "It includes : \nDoctor Consultations \nLab Benefit with Reimbursement upto Rs. 1000\nNetwork discounts \nTeleconsultation\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/diabetes-care-basic\nYou may enter buy to get purchase link else you may ignore it"
 
   utter_diabetes_care_basic_qns:
   - text: "Would you like to know more about Diabetes Care Basic?"
 
   utter_diabetes_care_plus:
-  - text: "It includes : \nDoctor Consultations \nLab Benefit with Reimbursement upto Rs. 1500 \nNetwork discounts \nTeleconsultation\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/diabetes-care-plus"
+  - text: "It includes : \nDoctor Consultations \nLab Benefit with Reimbursement upto Rs. 1500 \nNetwork discounts \nTeleconsultation\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/diabetes-care-plus\nYou may enter buy to get purchase link else you may ignore it"
    
   utter_diabetes_care_plus_qns:
   - text: "Would you like to know more about Diabetes Care Plus?"
 
   utter_cardiac_care_basic:
-  - text: "It includes : \nDoctor Consultations \nLab Benefit with Reimbursement upto Rs. 1000\nNetwork discounts \nTeleconsultation\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/cardiac-care-basic"
+  - text: "It includes : \nDoctor Consultations \nLab Benefit with Reimbursement upto Rs. 1000\nNetwork discounts \nTeleconsultation\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/cardiac-care-basic\nYou may enter buy to get purchase link else you may ignore it"
 
   utter_cardiac_care_basic_qns:
-  - text: "Would you like to know more about Cardiac Care Basic?"
+  - text: yes"Would you like to know more about Cardiac Care Basic?"
 
   utter_cardiac_care_plus:
-  - text: "It includes : \nDoctor Consultations \nLab Benefit with Reimbursement upto Rs. 1500 \nNetwork discounts \nTeleconsultation\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/cardiac-care-plus"
+  - text: "It includes : \nDoctor Consultations \nLab Benefit with Reimbursement upto Rs. 1500 \nNetwork discounts \nTeleconsultation\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/cardiac-care-plus\nYou may enter buy to get purchase link else you may ignore it"
    
   utter_cardiac_care_plus_qns:
   - text: "Would you like to know more about Cardiac Care Plus?"
 
   utter_complete_health_solution_platinum:
-  - text: "It includes : \nDoctor Consultations with benefits upto Rs. 18000\nHealth Insurance with upto Rs 10 lakh Sum Insured \nBajaj Finserv Health App \nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/complete-health-solution-platinum"
+  - text: "It includes : \nDoctor Consultations with benefits upto Rs. 18000\nHealth Insurance with upto Rs 10 lakh Sum Insured \nBajaj Finserv Health App \nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/complete-health-solution-platinum\nYou may enter buy to get purchase link else you may ignore it"
 
   utter_complete_health_solution_platinum_qns:
   - text: "Would you like to know more about Complete Health Solution Platinum?"
 
   utter_complete_health_solution_silver:
-  - text: "It includes : \nDoctor Consultations with benefits upto Rs. 17000\nHealth Insurance with upto Rs 10 lakh Sum Insured \nBajaj Finserv Health App \nCovid 19 Lab Test with benefits upto Rs 17000 \nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/complete-health-solution-silver"
+  - text: "It includes : \nDoctor Consultations with benefits upto Rs. 17000\nHealth Insurance with upto Rs 10 lakh Sum Insured \nBajaj Finserv Health App \nCovid 19 Lab Test with benefits upto Rs 17000 \nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/complete-health-solution-silver\nYou may enter buy to get purchase link else you may ignore it"
 
   utter_complete_health_solution_silver_qns:
   - text: "Would you like to know more about Complete Health Solution Silver?"
 
   utter_complete_health_solution:
-  - text: "It includes : \nDoctor Consultations with benefits upto Rs. 7000\nHospitalization Benefits\nHealth Insurance with upto Rs 10 lakh Sum Insured \nRuby Hall Card\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/complete-health-solution"
+  - text: "It includes : \nDoctor Consultations with benefits upto Rs. 7000\nHospitalization Benefits\nHealth Insurance with upto Rs 10 lakh Sum Insured \nRuby Hall Card\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/complete-health-solution\nYou may enter buy to get purchase link else you may ignore it"
 
   utter_complete_health_solution_qns:
   - text: "Would you like to know more about Complete Health Solution?"
 
   utter_hospicare:
-  - text: "It includes : \nDoctor Consultations with benefits upto Rs. 1000\nHealth Check-up with benefits upto Rs. 4500 \nBajaj Finserv Health App \nHospital Cash Benefits upto Rs 2000/day\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/hospicare-plus"
+  - text: "It includes : \nDoctor Consultations with benefits upto Rs. 1000\nHealth Check-up with benefits upto Rs. 4500 \nBajaj Finserv Health App \nHospital Cash Benefits upto Rs 2000/day\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/hospicare-plus\nYou may enter buy to get purchase link else you may ignore it"
+
+  utter_check_up_Mumbai:
+  - text: "For this age category we would suggest a complete body checkup.\nFor your city our partnering hospitals are:\n1. Hinduja\n2. H.N. Reliance\n 3. Cooper Hospital\nYou may click on the following link to confirm the complete check-up : \nhttps://www.bajajfinservhealth.in/checkup/confirm\nIf you don't wish to continue ignore the link "
+ 
+  utter_check_up_Manipal:
+  - text: "For this age category we would suggest a complete body checkup.\nFor your city our partnering hospitals are:\n1. KMC Manipal\n2. MGM Hospital\n 3. Aadarsh Hospital\nYou may click on the following link to confirm the complete check-up: \nhttps://www.bajajfinservhealth.in/checkup/confirm\nIf you don't wish to continue ignore the link"
+  
+  utter_check_up_Pune:
+  - text: "For this age category we would suggest a complete body checkup.\nFor your city our partnering hospitals are:\n1. DY Patil Hospital\n2. Phoenix Hospital\n 3. Kashibai Navle Hospital\nYou may click on the following link to confirm the complete check-up: \nhttps://www.bajajfinservhealth.in/checkup/confirm\nIf you don't wish to continue ignore the link"
+  
+  utter_check_up_Bangalore:
+  - text: "For this age category we would suggest a complete body checkup.\nFor your city our partnering hospitals are:\n1. Manipal Hospital White Field\n2. Fortis Hospital\n 3. Apollo Hospital\nYou may click on the following link to confirm the complete check-up: \nhttps://www.bajajfinservhealth.in/checkup/confirm\nIf you don't wish to continue ignore the link"
+  
+  utter_check_ECG_Mumbai:
+  - text: "For your city our partnering hospitals are:\n1. Hinduja\n2. H.N. Reliance\nYou may click on the following link to confirm the ECG test : \nhttps://www.bajajfinservhealth.in/ECG/confirm\nIf you don't wish to continue ignore the link "
+ 
+  utter_check_ECG_Manipal:
+  - text: "For your city our partnering hospitals are:\n1. KMC Manipal\nYou may click on the following link to confirm the ECG test : \nhttps://www.bajajfinservhealth.in/ECG/confirm\nIf you don't wish to continue ignore the link "
+ 
+  utter_check_ECG_Pune:
+  - text: "For your city our partnering hospitals are:\n1. DY Patil Hospital\n2. Phoenix Hospital\nYou may click on the following link to confirm the ECG test : \nhttps://www.bajajfinservhealth.in/ECG/confirm\nIf you don't wish to continue ignore the link "
+ 
+  utter_check_ECG_Bangalore:
+  - text: "For your city our partnering hospitals are:\n1. Manipal Hospital White Field\n2. Fortis Hospital\nYou may click on the following link to confirm the ECG test : \nhttps://www.bajajfinservhealth.in/ECG/confirm\nIf you don't wish to continue ignore the link "
+ 
+  utter_check_LFT_Mumbai:
+  - text: "For your city our partnering hospitals are:\n1. Hinduja\n2. H.N. Reliance\nYou may click on the following link to confirm the LFT test : \nhttps://www.bajajfinservhealth.in/LFT/confirm\nIf you don't wish to continue ignore the link "
+ 
+  utter_check_LFT_Manipal:
+  - text: "For your city our partnering hospitals are:\n1. KMC Manipal\nYou may click on the following link to confirm the LFT test : \nhttps://www.bajajfinservhealth.in/LFT/confirm\nIf you don't wish to continue ignore the link "
+ 
+  utter_check_LFT_Pune:
+  - text: "For your city our partnering hospitals are:\n1. DY Patil Hospital\n2. Phoenix Hospital\nYou may click on the following link to confirm the LFT test : \nhttps://www.bajajfinservhealth.in/LFT/confirm\nIf you don't wish to continue ignore the link "
+ 
+  utter_check_LFT_Bangalore:
+  - text: "For your city our partnering hospitals are:\n1. Manipal Hospital White Field\n2. Fortis Hospital\nYou may click on the following link to confirm the LFT test : \nhttps://www.bajajfinservhealth.in/LFT/confirm\nIf you don't wish to continue ignore the link " 
+  
+  utter_check_BC_Mumbai:
+  - text: "For your city our partnering hospitals are:\n1. Hinduja\n2. H.N. Reliance\nYou may click on the following link to confirm the Blood Count test : \nhttps://www.bajajfinservhealth.in/BC/confirm\nIf you don't wish to continue ignore the link "
+ 
+  utter_check_BC_Manipal:
+  - text: "For your city our partnering hospitals are:\n1. KMC Manipal\nYou may click on the following link to confirm the Blood Count test : \nhttps://www.bajajfinservhealth.in/BC/confirm\nIf you don't wish to continue ignore the link "
+ 
+  utter_check_BC_Pune:
+  - text: "For your city our partnering hospitals are:\n1. DY Patil Hospital\n2. Phoenix Hospital\nYou may click on the following link to confirm the Blood Count test : \nhttps://www.bajajfinservhealth.in/BC/confirm\nIf you don't wish to continue ignore the link "
+ 
+  utter_check_BC_Bangalore:
+  - text: "For your city our partnering hospitals are:\n1. Manipal Hospital White Field\n2. Fortis Hospital\nYou may click on the following link to confirm the Blood Count test : \nhttps://www.bajajfinservhealth.in/BC/confirm\nIf you don't wish to continue ignore the link " 
 
   utter_aarogya_care:
   - text: "Here are some of the Aarogya Care Health Packages we have :\n"
@@ -224,16 +277,13 @@ responses:
     - title: "Complete Health Solution"
       payload: "/complete_health_solution"
 
-  utter_type_insurance:
-  - text: "Please select one :\n"
+  utter_insurance:
+  - text: "Here are some insurance products :\n"
     buttons:
     - title: "Health Insurance"
       payload: "/health_insurance"
     - title: "Life Insurance"
-      payload: "/life_insurace"
-    - title: "Non Insurance"
-      payload: "/non_insurance"
-
+      payload: "/life_insurance"
 
   utter_life_insurance:
   - text: "Here are some of the Life Insurance Packages we have :\n"
@@ -242,7 +292,7 @@ responses:
       payload: "/hospicare"
 
   utter_product_catalogue:
-  - text: "Here are some of the Aarogya Care Health Packages we have :\n"
+  - text: "Here are some of the Product Catalogues :\n"
     buttons:
     - title: "Aarogya Care"
       payload: "/aarogya_care"
@@ -344,6 +394,10 @@ responses:
       payload: "/cardiac_care_plus"
     - title: "Cardiac Care Basic"
       payload: "/cardiac_care_basic"
+
+  utter_buy:
+  - text: "You can buy it over here https://www.bajajfinservhealth.in/buy :\n"
+
 
 session_config:
   session_expiration_time: 60

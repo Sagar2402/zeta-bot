@@ -30,7 +30,5 @@ rules:
     - name: null
     - age: null
     - gender: null
-    - place: null
-    - pre_medical: null
   # The actions we want to run when the form is submitted.
   - action: actions_submit_appoint

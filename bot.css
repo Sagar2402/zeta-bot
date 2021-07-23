@@ -1,62 +1,122 @@
 body{
+
     height: 100vh;
+
     background-image: linear-gradient(to bottom right, #8693AB, #BDD4E7); 
 
+
+
 }
+
+
 
 .logo{
+
     position: absolute;
+
     height: 85px;
+
     width: 85px;
+
     top: 10px;
+
     left: 25px;
+
 }
+
+
 
 .chatroom h3{
+
     background-color: rgb(92, 45, 144)  !IMPORTANT;
+
 }
+
+
 
 .chatroom .input {
+
     background-color: rgb(92, 45, 144)  !IMPORTANT;
+
     color: white;
+
 }
+
+
 
 .chatroom .input input[type=submit]{
+
     background-color: rgb(92, 45, 144)  !IMPORTANT;
+
     border: 1px dashed white !IMPORTANT;
+
 }
+
+
 
 .chatroom #speech-input{
+
     background-color: rgb(92, 45, 144)  !IMPORTANT;
+
 }
+
+
 
 .chatroom .chats {
+
     background-color: black !IMPORTANT;
 
+
+
 }
+
+
 
 .chatroom .chats .time {
+
     color: white !IMPORTANT;
+
 }
+
+
 
 .chatroom .chats .chat {
+
     background-color: white !IMPORTANT;
+
     border-radius: 2px !IMPORTANT;
+
 }
 
+
+
 .chatroom .chats .chat.right {
+
     background-color: rgb(92, 45, 144)  !IMPORTANT;
+
     color: white !IMPORTANT;
+
 }
+
+
 
 
 .chatroom .chats .chat-buttons .chat-button {
+
 background-color: white  !IMPORTANT;
+
 border: 1px dashed rgb(92, 45, 144)  !IMPORTANT;
+
 color: rgb(92, 45, 144) !IMPORTANT;
+
 }
 
+
+
 .chatroom .chats .chat-buttons .chat-button:hover {
+
     background-color: rgb(92, 45, 144)  !IMPORTANT;
+
     color: white !IMPORTANT;
+
 }

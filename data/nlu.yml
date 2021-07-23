@@ -31,6 +31,11 @@ nlu:
     - bye bye
     - see you later
 
+- intent: buy
+  examples: |
+    - buy
+    - i want to buy this
+
 - intent: affirm
   examples: |
     - yes
@@ -89,6 +94,8 @@ nlu:
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
+    - who are you
+    - what is your name
     - am I talking to a human?
 
 - intent: bajaj_finserv
@@ -102,16 +109,17 @@ nlu:
   examples: |
     -I want to read some articles.
     -What articles do you have?
-    -Any health pamplets?
     -Any health documents?
     -I want some information.
 
 - intent: product_catalogue
   examples: |
     -I want some information.
-    -What all health insurances you have?
+    -What all health insurances do you have?
     -What all health packages you have?
     -Health Packages
+    -Show me your products
+    -What are your products
     -Product Catalogue
 
 - intent: contact_doctor
@@ -126,6 +134,8 @@ nlu:
     -What is aarogya care
     -aarogya care
     -What all comes under aarogya care
+    -arogya care
+    -What is arogya care
 
 - intent: ayurveda
   examples: |
@@ -136,6 +146,10 @@ nlu:
   examples: |
     -I want to buy insurance
     -I am looking to buy insurance
+    -I want to buy insurance for family
+    -I want to buy insurance for friends
+    -I want to buy insurance for my father
+    -I want to buy insurance for my mother
 
 - intent: emi_card
   examples: |
@@ -151,6 +165,7 @@ nlu:
     -What health insurances you provide?
     -Can I get information about some health insurances
     -Can I get information about health insurances
+    -What is health insurance
     
 - intent: life_insurance
   examples: |
@@ -158,11 +173,13 @@ nlu:
     -What life insurances you provide?
     -Can I get information about some life insurances
     -Can I get information about life insurances
+    -What is life insurance
     
 - intent: non_insurance
   examples: |
     -Non insurance
     -What non insurances you provide?
+    -What is non insurance
 
 - intent: hospicare
   examples: |
@@ -231,8 +248,6 @@ nlu:
 - intent: more_info
   examples: |
     -Can you elaborate
-    -Can I have more information
-    -Can I know more about it
     -Reimbursements
     -Perks
     -Benefits
@@ -248,4 +263,26 @@ nlu:
     - check for me
     - I want to enter details
     - Should I enter my details
+    - I dont know what to buy
+    - Suggest me some products
+    - My name is xyz I am looking for abc product
     - My details
+    - I have fever
+    - fever
+    - I have high blood pressure
+    - I want to do complete blood count
+    - I want do blood test
+    - I want to do renal function test
+    - renal function test
+    - I want to do liver function test
+    - liver function test
+    - ECG
+    - electrocardiogram
+
+- intent: payment_issues
+  examples: |
+    - I am having payment issues
+    - Payment issues
+    - Unable to complete payment
+  
+     

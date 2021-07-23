@@ -44,6 +44,11 @@ stories:
   - intent: contact_doctor
   - action: utter_contact_doctor
 
+- story: payment_issues
+  steps:
+  - intent: payment_issues
+  - action: utter_payment_issues
+
 - story: emi_card
   steps:
   - intent: emi_card
@@ -84,6 +89,8 @@ stories:
   steps:
   - intent: hospicare
   - action: utter_hospicare
+  - intent: buy
+  - action: utter_buy
 
 - story: diabetes_care_basic
   steps:
@@ -93,6 +100,8 @@ stories:
   - action: utter_diabetes_care_basic
   - intent: affirm
   - action: utter_diabetes_care_basic
+  - intent: buy
+  - action: utter_buy
   - intent: deny
   - action: utter_ok
   
@@ -104,6 +113,8 @@ stories:
   - action: utter_diabetes_care_plus
   - intent: affirm
   - action: utter_diabetes_care_plus
+  - intent: buy
+  - action: utter_buy
   - intent: deny
   - action: utter_diabetes_care_basic_qns
 
@@ -115,6 +126,8 @@ stories:
   - action: utter_cardiac_care_basic
   - intent: affirm
   - action: utter_cardiac_care_basic
+  - intent: buy
+  - action: utter_buy
   - intent: deny
   - action: utter_ok
 
@@ -126,6 +139,8 @@ stories:
   - action: utter_cardiac_care_plus
   - intent: affirm
   - action: utter_cardiac_care_plus
+  - intent: buy
+  - action: utter_buy
   - intent: deny
   - action: utter_cardiac_care_basic_qns
 
@@ -137,6 +152,8 @@ stories:
   - action: utter_complete_health_solution
   - intent: affirm
   - action: utter_complete_health_solution
+  - intent: buy
+  - action: utter_buy
   - intent: deny
   - action: utter_ok
   
@@ -150,6 +167,8 @@ stories:
   - action: utter_complete_health_solution_silver
   - intent: deny
   - action: utter_complete_health_solution_qns
+  - intent: buy
+  - action: utter_buy
   - intent: cheaper_option
   - action: utter_complete_health_solution_qns
   
@@ -164,6 +183,8 @@ stories:
   - action: utter_complete_health_solution_platinum
   - intent: deny
   - action: utter_complete_health_solution_silver_qns
+  - intent: buy
+  - action: utter_buy
   - intent: cheaper_option
   - action: utter_complete_health_solution_silver_qns
 
@@ -172,7 +193,7 @@ stories:
   - intent: buy_insurance
   - action: utter_do_you_have_insurance
   - intent: affirm
-  - action: utter_type_insurance
+  - action: utter_non_insurance
   - intent: deny
-  - action: utter_aarogya_care
+  - action: utter_insurance
   

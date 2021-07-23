@@ -67,19 +67,65 @@ class ActionSubmitProject(Action):
         print("date is  is  : ",gender) 
         print("age is " , age)
 
+        if(pre_medical=="High Blood Pressure"):
+            dispatcher.utter_message(template="utter_contact_doctor")
+            
+        elif(pre_medical=="fever" or pre_medical=="cough" or pre_medical=="body ache"):
+            if(int(age)>40):
+                if(place=="Mumbai"):
+                    dispatcher.utter_message(template="utter_check_up_Mumbai")
+                if(place=="Pune"):
+                    dispatcher.utter_message(template="utter_check_up_Pune")
+                if(place=="Manipal"):
+                    dispatcher.utter_message(template="utter_check_up_Manipal")
+                if(place=="Bangalore"):
+                    dispatcher.utter_message(template="utter_check_up_Bangalore")
+            else:
+                dispatcher.utter_message(template="utter_contact_doctor")
+        
+        elif(pre_medical=="liver function test"):
+            if(place=="Mumbai"):
+                dispatcher.utter_message(template="utter_check_LFT_Mumbai")
+            if(place=="Pune"):
+                dispatcher.utter_message(template="utter_check_LFT_Pune")
+            if(place=="Manipal"):
+                dispatcher.utter_message(template="utter_check_LFT_Manipal")
+            if(place=="Bangalore"):
+                dispatcher.utter_message(template="utter_check_LFT_Bangalore")
+        
+        elif(pre_medical=="ECG"):
+            if(place=="Mumbai"):
+                dispatcher.utter_message(template="utter_check_ECG_Mumbai")
+            if(place=="Pune"):
+                dispatcher.utter_message(template="utter_check_ECG_Pune")
+            if(place=="Manipal"):
+                dispatcher.utter_message(template="utter_check_ECG_Manipal")
+            if(place=="Bangalore"):
+                dispatcher.utter_message(template="utter_check_ECG_Bangalore")
 
-        if(int(age)<=25 and (gender=='M' or gender =='m')):
-            dispatcher.utter_message(template="utter_20_M")
-        if(int(age)> 25 and int(age)<=50 and (gender=='M' or gender =='m')):
-            dispatcher.utter_message(template="utter_40_M")
-        if(int(age)> 50 and (gender=='M' or gender =='m')):
-            dispatcher.utter_message(template="utter_60_M")
-        if(int(age)<=25 and (gender=='F' or gender =='f')):
-            dispatcher.utter_message(template="utter_20_F")
-        if(int(age)> 25 and int(age)<=50 and (gender=='F' or gender =='f')):
-            dispatcher.utter_message(template="utter_40_F")
-        if(int(age)> 50 and (gender=='F' or gender =='f')):
-            dispatcher.utter_message(template="utter_60_F")
+        elif(pre_medical=="complete blood count" or pre_medical=="blood count"):
+            if(place=="Mumbai"):
+                dispatcher.utter_message(template="utter_check_BC_Mumbai")
+            if(place=="Pune"):
+                dispatcher.utter_message(template="utter_check_BC_Pune")
+            if(place=="Manipal"):
+                dispatcher.utter_message(template="utter_check_BC_Manipal")
+            if(place=="Bangalore"):
+                dispatcher.utter_message(template="utter_check_BC_Bangalore")
+            
+        else:
+            if(int(age)<=25 and (gender=='M' or gender =='m')):
+                dispatcher.utter_message(template="utter_20_M")
+            if(int(age)> 25 and int(age)<=50 and (gender=='M' or gender =='m')):
+                dispatcher.utter_message(template="utter_40_M")
+            if(int(age)> 50 and (gender=='M' or gender =='m')):
+                dispatcher.utter_message(template="utter_60_M")
+            if(int(age)<=25 and (gender=='F' or gender =='f')):
+                dispatcher.utter_message(template="utter_20_F")
+            if(int(age)> 25 and int(age)<=50 and (gender=='F' or gender =='f')):
+                dispatcher.utter_message(template="utter_40_F")
+            if(int(age)> 50 and (gender=='F' or gender =='f')):
+                dispatcher.utter_message(template="utter_60_F")
         
 
         
