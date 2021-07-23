@@ -5,6 +5,91 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 
+import json
+from pathlib import Path
+from typing import Any, Text, Dict, List ,Optional
+from rasa_sdk.events import AllSlotsReset
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher ,Action
+from rasa_sdk.knowledge_base.storage import InMemoryKnowledgeBase
+from rasa_sdk.knowledge_base.actions import ActionQueryKnowledgeBase
+from rasa_sdk import Tracker
+from rasa_sdk.forms import FormValidationAction
+from rasa_sdk.events import AllSlotsReset, SlotSet
+from rasa_sdk.events import SlotSet, EventType
+from rasa_sdk.types import DomainDict
+
+
+# show projects
+class ValidateRegisterForm(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_appointment_form"
+    def run(
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
+    ) -> List[EventType]:
+        return []
+
+    def validate_name(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate slot value."""
+        required_slots = ["name" , "age" , "gender" , "place" , "pre_medical"]
+        for slot_name in required_slots:
+            if tracker.slots.get(slot_name) is None:
+                return [SlotSet("requested_slot" , slot_name)]
+ 
+        return [SlotSet("requested_slot" , None)]
+       # if not slot_value:
+       #  return {"name": None}
+       # else: 
+        # return {"name": slot_value}	
+class ActionSubmitProject(Action):
+    def name(self) -> Text:
+        return "actions_submit_appoint"
+
+    def run(
+        self,
+        dispatcher,
+        tracker: Tracker,
+        domain: "DomainDict",
+    ) -> List[Dict[Text, Any]]:
+	
+        name = tracker.get_slot("name")
+        age = tracker.get_slot("age")
+        gender = tracker.get_slot("gender")
+        place = tracker.get_slot("place")
+        pre_medical = tracker.get_slot("pre_medical")
+        print("name  is  : ",name) 
+        print("date is  is  : ",gender) 
+        print("age is " , age)
+
+
+        if(int(age)<=25 and (gender=='M' or gender =='m')):
+            dispatcher.utter_message(template="utter_20_M")
+        if(int(age)> 25 and int(age)<=50 and (gender=='M' or gender =='m')):
+            dispatcher.utter_message(template="utter_40_M")
+        if(int(age)> 50 and (gender=='M' or gender =='m')):
+            dispatcher.utter_message(template="utter_60_M")
+        if(int(age)<=25 and (gender=='F' or gender =='f')):
+            dispatcher.utter_message(template="utter_20_F")
+        if(int(age)> 25 and int(age)<=50 and (gender=='F' or gender =='f')):
+            dispatcher.utter_message(template="utter_40_F")
+        if(int(age)> 50 and (gender=='F' or gender =='f')):
+            dispatcher.utter_message(template="utter_60_F")
+        
+
+        
+        #dispatcher.utter_message(template="utter_details_under20")
+        return[AllSlotsReset()]
+
+
+
+
+
 # This is a simple example for a custom action which utters "Hello World!"
 
 # from typing import Any, Text, Dict, List

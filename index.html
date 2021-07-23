@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Rasa</title>
+        <link rel="stylesheet" href="bot.css" />
+        <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
+      </head>
+    <body>
+        <div class="chat-container" style="width: 450px;margin-left: 33%;margin-top: 30px;"></div>
+    <div class="logo">
+        <img src="blogo.png" style="width: 85px; height: 85px;" />
+    </div>
+  <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"/></script>
+  <script type="text/javascript">
+    var chatroom = new window.Chatroom({
+      host: "http://localhost:5005",
+      title: "Team Zeta",
+      container: document.querySelector(".chat-container"),
+      welcomeMessage: "Hi, I am from Team Zeta. How may I help you? ",
+      speechRecognition: "en-US",
+      voiceLang: "en-US"
+    });
+    chatroom.openChat();
+  </script>    
+    </body>
+</html>

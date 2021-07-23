@@ -1,5 +1,40 @@
 version: "2.0"
 
+actions:
+- validate_appointment_form
+- actions_submit_appoint
+
+forms:
+   appointment_form:
+      name:
+        - type: from_text
+      age:
+        - type: from_text
+      gender:
+        - type: from_text
+      place:
+        - type: from_text
+      pre_medical:
+        - type: from_text
+
+slots:
+  name:
+     type: text
+     influence_conversation: false
+  age:
+     type: text
+     influence_conversation: false
+  gender:
+     type: text
+     influence_conversation: false
+  place:
+     type: text
+     influence_conversation: false
+
+  pre_medical:
+     type: text
+     influence_conversation: false
+
 intents:
   - greet
   - goodbye
@@ -8,10 +43,37 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - bajaj_finserv
+  - article
+  - aarogya_care
+  - ayurveda
+  - contact_doctor
+  - emi_card
+  - more_info
+  - hospicare
+  - diabetes_care_basic
+  - diabetes_care_plus
+  - cardiac_care_basic
+  - cardiac_care_plus
+  - product_catalogue
+  - complete_health_solution_platinum
+  - complete_health_solution_silver
+  - complete_health_solution
+  - cheaper_option
+  - health_insurance
+  - life_insurance
+  - non_insurance
+  - buy_insurance
+  - register_appointment
 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
+    buttons:
+    - title: "great"
+      payload: "/mood_great"
+    - title: "super sad"
+      payload: "/mood_unhappy"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -20,14 +82,268 @@ responses:
   utter_did_that_help:
   - text: "Did that help you?"
 
+  utter_ok:
+  - text: "Ok, no issues !"
+
   utter_happy:
   - text: "Great, carry on!"
 
   utter_goodbye:
   - text: "Bye"
 
+  utter_details_thanks:
+  - text: " Name : {name}\n Age : {age}\n Gender : {gender}"
+
+  utter_details_under20:
+  - text: " Hey : {name} you are under 20"
+
+  utter_details_above20:
+  - text: " Hey : {name} you are over 20"
+
+  utter_ask_name:
+  - text: "Please enter your name"
+
+  utter_ask_age:
+  - text: "How old are you?"
+
+  utter_ask_gender:
+  - text: "and gender..? (M/F)"
+
+  utter_ask_place:
+  - text: "Where are you from?"
+
+  utter_ask_pre_medical:
+  - text: "Any existing medical issues?"
+
   utter_iamabot:
-  - text: "I am a bot, built by Team Zeta."
+  - text: "I am a bot, powered by Zeta."
+
+  utter_bajaj_finserv:
+  - text: "We are an insurance company"
+
+  utter_do_you_have_insurance:
+  - text: "Do you have an insurance?"
+
+  utter_article:
+  - text: "You may have a look at our articles here : \nhttps://www.bajajfinservhealth.in/health-library"
+
+  utter_ayurveda:
+  - text: "Take a look at this : https://www.bajajfinservhealth.in/health-library/ayurveda"
+
+  utter_contact_doctor:
+  - text: "Yeah sure, here at Bajaj Finserv we have various doctors of different speciality. \nPlease visit : https://www.bajajfinservhealth.in/online-doctor-consultation to book an appointment."
+
+  utter_emi_card_qns:
+  - text: "Would you like to visit EMI card options?"
+
+  utter_emi_card:
+  - text: "There are two option:\nBajaj Finserv EMI Card : https://www.bajajfinservhealth.in/emi-network-health-emi-card?loginRequired=true \nBajaj  Finserv Health EMI Card : https://www.bajajfinservhealth.in/emi-network-health-emi-card"
+
+  utter_diabetes_care_basic:
+  - text: "It includes : \nDoctor Consultations \nLab Benefit with Reimbursement upto Rs. 1000\nNetwork discounts \nTeleconsultation\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/diabetes-care-basic"
+
+  utter_diabetes_care_basic_qns:
+  - text: "Would you like to know more about Diabetes Care Basic?"
+
+  utter_diabetes_care_plus:
+  - text: "It includes : \nDoctor Consultations \nLab Benefit with Reimbursement upto Rs. 1500 \nNetwork discounts \nTeleconsultation\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/diabetes-care-plus"
+   
+  utter_diabetes_care_plus_qns:
+  - text: "Would you like to know more about Diabetes Care Plus?"
+
+  utter_cardiac_care_basic:
+  - text: "It includes : \nDoctor Consultations \nLab Benefit with Reimbursement upto Rs. 1000\nNetwork discounts \nTeleconsultation\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/cardiac-care-basic"
+
+  utter_cardiac_care_basic_qns:
+  - text: "Would you like to know more about Cardiac Care Basic?"
+
+  utter_cardiac_care_plus:
+  - text: "It includes : \nDoctor Consultations \nLab Benefit with Reimbursement upto Rs. 1500 \nNetwork discounts \nTeleconsultation\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/cardiac-care-plus"
+   
+  utter_cardiac_care_plus_qns:
+  - text: "Would you like to know more about Cardiac Care Plus?"
+
+  utter_complete_health_solution_platinum:
+  - text: "It includes : \nDoctor Consultations with benefits upto Rs. 18000\nHealth Insurance with upto Rs 10 lakh Sum Insured \nBajaj Finserv Health App \nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/complete-health-solution-platinum"
+
+  utter_complete_health_solution_platinum_qns:
+  - text: "Would you like to know more about Complete Health Solution Platinum?"
+
+  utter_complete_health_solution_silver:
+  - text: "It includes : \nDoctor Consultations with benefits upto Rs. 17000\nHealth Insurance with upto Rs 10 lakh Sum Insured \nBajaj Finserv Health App \nCovid 19 Lab Test with benefits upto Rs 17000 \nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/complete-health-solution-silver"
+
+  utter_complete_health_solution_silver_qns:
+  - text: "Would you like to know more about Complete Health Solution Silver?"
+
+  utter_complete_health_solution:
+  - text: "It includes : \nDoctor Consultations with benefits upto Rs. 7000\nHospitalization Benefits\nHealth Insurance with upto Rs 10 lakh Sum Insured \nRuby Hall Card\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/complete-health-solution"
+
+  utter_complete_health_solution_qns:
+  - text: "Would you like to know more about Complete Health Solution?"
+
+  utter_hospicare:
+  - text: "It includes : \nDoctor Consultations with benefits upto Rs. 1000\nHealth Check-up with benefits upto Rs. 4500 \nBajaj Finserv Health App \nHospital Cash Benefits upto Rs 2000/day\nPlease scroll down on the following link to get yourself registered or to know more about it \nhttps://www.bajajfinservhealth.in/aarogya-care/hospicare-plus"
+
+  utter_aarogya_care:
+  - text: "Here are some of the Aarogya Care Health Packages we have :\n"
+    buttons:
+    - title: "Diabetes Care Plus"
+      payload: "/diabetes_care_plus"
+    - title: "Diabetes Care Basic"
+      payload: "/diabetes_care_basic"
+    - title: "Cardiac Care Plus"
+      payload: "/cardiac_care_plus"
+    - title: "Cardiac Care Basic"
+      payload: "/cardiac_care_basic"
+    - title: "Complete Health Solution Platinum"
+      payload: "/complete_health_solution_platinum"
+    - title: "Complete Health Solution Silver"
+      payload: "/complete_health_solution_silver"
+    - title: "Complete Health Solution"
+      payload: "/complete_health_solution"
+
+  utter_non_insurance:
+  - text: "Here are some of the Non Insurance Packages we have :\n"
+    buttons:
+    - title: "Diabetes Care Plus"
+      payload: "/diabetes_care_plus"
+    - title: "Diabetes Care Basic"
+      payload: "/diabetes_care_basic"
+    - title: "Cardiac Care Plus"
+      payload: "/cardiac_care_plus"
+    - title: "Cardiac Care Basic"
+      payload: "/cardiac_care_basic"
+    
+  utter_health_insurance:
+  - text: "Here are some of the Health Insurance Packages we have :\n"
+    buttons:
+    - title: "Complete Health Solution Platinum"
+      payload: "/complete_health_solution_platinum"
+    - title: "Complete Health Solution Silver"
+      payload: "/complete_health_solution_silver"
+    - title: "Complete Health Solution"
+      payload: "/complete_health_solution"
+
+  utter_type_insurance:
+  - text: "Please select one :\n"
+    buttons:
+    - title: "Health Insurance"
+      payload: "/health_insurance"
+    - title: "Life Insurance"
+      payload: "/life_insurace"
+    - title: "Non Insurance"
+      payload: "/non_insurance"
+
+
+  utter_life_insurance:
+  - text: "Here are some of the Life Insurance Packages we have :\n"
+    buttons:
+    - title: "Hospicare"
+      payload: "/hospicare"
+
+  utter_product_catalogue:
+  - text: "Here are some of the Aarogya Care Health Packages we have :\n"
+    buttons:
+    - title: "Aarogya Care"
+      payload: "/aarogya_care"
+    - title: "EMI Network"
+      payload: "/emi_card"
+    - title: "Health Library"
+      payload: "/article"
+    - title: "Contact Doctors"
+      payload: "/contact_doctor"
+  
+  utter_20_M:
+  - text: "Here are some of Packages that maybe helpful for you :\n"
+    buttons:
+    - title: "Complete Health Solution Platinum"
+      payload: "/complete_health_solution_platinum"
+    - title: "Complete Health Solution Silver"
+      payload: "/complete_health_solution_silver"
+    - title: "Complete Health Solution"
+      payload: "/complete_health_solution"
+  
+  utter_40_M:
+  - text: "Here are some of Packages that maybe helpful for you :\n"
+    buttons:
+    - title: "Complete Health Solution Platinum"
+      payload: "/complete_health_solution_platinum"
+    - title: "Complete Health Solution Silver"
+      payload: "/complete_health_solution_silver"
+    - title: "Complete Health Solution"
+      payload: "/complete_health_solution"
+    - title: "Hospicare"
+      payload: "/hospicare"
+    - title: "Cardiac Care Plus"
+      payload: "/cardiac_care_plus"
+    - title: "Cardiac Care Basic"
+      payload: "/cardiac_care_basic"
+  
+  utter_60_M:
+  - text: "Here are some of Packages that maybe helpful for you :\n"
+    buttons:
+    - title: "Complete Health Solution Platinum"
+      payload: "/complete_health_solution_platinum"
+    - title: "Complete Health Solution Silver"
+      payload: "/complete_health_solution_silver"
+    - title: "Complete Health Solution"
+      payload: "/complete_health_solution"
+    - title: "Hospicare"
+      payload: "/hospicare"
+    - title: "Diabetes Care Plus"
+      payload: "/diabetes_care_plus"
+    - title: "Diabetes Care Basic"
+      payload: "/diabetes_care_basic"
+    - title: "Cardiac Care Plus"
+      payload: "/cardiac_care_plus"
+    - title: "Cardiac Care Basic"
+      payload: "/cardiac_care_basic"
+  
+  utter_20_F:
+  - text: "Here are some of Packages that maybe helpful for you :\n"
+    buttons:
+    - title: "Complete Health Solution Platinum"
+      payload: "/complete_health_solution_platinum"
+    - title: "Complete Health Solution Silver"
+      payload: "/complete_health_solution_silver"
+    - title: "Complete Health Solution"
+      payload: "/complete_health_solution"
+  
+  utter_40_F:
+  - text: "Here are some of Packages that maybe helpful for you :\n"
+    buttons:
+    - title: "Complete Health Solution Platinum"
+      payload: "/complete_health_solution_platinum"
+    - title: "Complete Health Solution Silver"
+      payload: "/complete_health_solution_silver"
+    - title: "Complete Health Solution"
+      payload: "/complete_health_solution"
+    - title: "Hospicare"
+      payload: "/hospicare"
+    - title: "Diabetes Care Plus"
+      payload: "/diabetes_care_plus"
+    - title: "Diabetes Care Basic"
+      payload: "/diabetes_care_basic"
+
+  utter_60_F:
+  - text: "Here are some of Packages that maybe helpful for you :\n"
+    buttons:
+    - title: "Complete Health Solution Platinum"
+      payload: "/complete_health_solution_platinum"
+    - title: "Complete Health Solution Silver"
+      payload: "/complete_health_solution_silver"
+    - title: "Complete Health Solution"
+      payload: "/complete_health_solution"
+    - title: "Hospicare"
+      payload: "/hospicare"
+    - title: "Diabetes Care Plus"
+      payload: "/diabetes_care_plus"
+    - title: "Diabetes Care Basic"
+      payload: "/diabetes_care_basic"
+    - title: "Cardiac Care Plus"
+      payload: "/cardiac_care_plus"
+    - title: "Cardiac Care Basic"
+      payload: "/cardiac_care_basic"
 
 session_config:
   session_expiration_time: 60

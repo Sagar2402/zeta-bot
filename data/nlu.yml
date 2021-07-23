@@ -90,3 +90,162 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: bajaj_finserv
+  examples: |
+    -what is bajaj finserv?
+    -what is the role of bajaj finserv?
+    -what is this company?
+    -why is this company famous?
+    
+- intent: article
+  examples: |
+    -I want to read some articles.
+    -What articles do you have?
+    -Any health pamplets?
+    -Any health documents?
+    -I want some information.
+
+- intent: product_catalogue
+  examples: |
+    -I want some information.
+    -What all health insurances you have?
+    -What all health packages you have?
+    -Health Packages
+    -Product Catalogue
+
+- intent: contact_doctor
+  examples: |
+    -I want to contact a Physician
+    -I want to contact a Endocronologist
+    -I want to contact a Gynaecologist
+    -I want to contact a Doctor
+
+- intent: aarogya_care
+  examples: |
+    -What is aarogya care
+    -aarogya care
+    -What all comes under aarogya care
+
+- intent: ayurveda
+  examples: |
+    -what is ayurveda
+    -ayurveda
+
+- intent: buy_insurance
+  examples: |
+    -I want to buy insurance
+    -I am looking to buy insurance
+
+- intent: emi_card
+  examples: |
+    -emi card.
+    -What is emi card?
+    -Bajaj finserv emi card
+    -bajaj finserv health emi card
+    -health emi card
+
+- intent: health_insurance
+  examples: |
+    -Health insurance
+    -What health insurances you provide?
+    -Can I get information about some health insurances
+    -Can I get information about health insurances
+    
+- intent: life_insurance
+  examples: |
+    -Life insurance
+    -What life insurances you provide?
+    -Can I get information about some life insurances
+    -Can I get information about life insurances
+    
+- intent: non_insurance
+  examples: |
+    -Non insurance
+    -What non insurances you provide?
+
+- intent: hospicare
+  examples: |
+    -What is hospicare
+    -What is provided in hospicare?
+    -Hospicare
+
+- intent: diabetes_care_basic
+  examples: |
+    -What is diabetes care basic?
+    -Diabetes care plus
+    -Cheap diabetes care
+    -cheap diabetes plan
+    -cheap diabetes option
+
+- intent: diabetes_care_plus
+  examples: |
+    -What is diabetes care plus?
+    -Best diabetes care
+    -Best diabetes plan
+    -Best diabetes option
+
+- intent: cardiac_care_basic
+  examples: |
+    -What is cardiac care basic?
+    -cardiac care basic
+    -Cheap cardiac care
+    -cheap cardiac plan
+    -cheap cardiac option
+
+- intent: cardiac_care_plus
+  examples: |
+    -What is cardiac care plus?
+    -cardiac care plus
+    -Best cardiac care
+    -Best cardiac plan
+    -Best cardiac option
+
+- intent: complete_health_solution_platinum
+  examples: |
+    -What is the best complete health solution?
+    -best complete health solution
+    -What is the best health solution?
+    -What is the platinum complete health solution?
+    -platinum complete health solution
+    -platinum complete health package
+
+- intent: complete_health_solution_silver
+  examples: |
+    -What is the most sold complete health solution?
+    -most sold complete health solution
+    -What is the most sold health solution?
+    -What is the silver complete health solution?
+    -silver complete health solution
+    -ailver complete health package
+
+- intent: complete_health_solution
+  examples: |
+    -What is the cheapest complete health solution?
+    -cheapest complete health solution
+    -What is the cheapest health solution?
+    -What is the complete health solution?
+    -complete health solution
+    -complete health package
+    
+- intent: more_info
+  examples: |
+    -Can you elaborate
+    -Can I have more information
+    -Can I know more about it
+    -Reimbursements
+    -Perks
+    -Benefits
+
+- intent: cheaper_option
+  examples: |
+    - Is there a cheaper option?
+    - Something less expensive
+    - Can you show something less expensive
+
+- intent: register_appointment
+  examples: |
+    - check for me
+    - I want to enter details
+    - Should I enter my details
+    - My details

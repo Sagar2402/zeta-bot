@@ -28,3 +28,151 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: compay info
+  steps:
+  - intent: bajaj_finserv
+  - action: utter_bajaj_finserv
+
+- story: article
+  steps:
+  - intent: article
+  - action: utter_article
+
+- story: contact_doctor
+  steps:
+  - intent: contact_doctor
+  - action: utter_contact_doctor
+
+- story: emi_card
+  steps:
+  - intent: emi_card
+  - action: utter_emi_card_qns
+  - intent: more_info
+  - action: utter_emi_card
+  - intent: affirm
+  - action: utter_emi_card
+  - intent: deny
+  - action: utter_ok
+
+- story: product_catalogue
+  steps:
+  - intent: product_catalogue
+  - action: utter_product_catalogue
+
+- story: aarogya_care
+  steps:
+  - intent: aarogya_care
+  - action: utter_aarogya_care
+
+- story: life_insurance
+  steps:
+  - intent: life_insurance
+  - action: utter_life_insurance
+
+- story: health_insurance
+  steps:
+  - intent: health_insurance
+  - action: utter_health_insurance
+
+- story: non_insurance
+  steps:
+  - intent: non_insurance
+  - action: utter_non_insurance
+
+- story: hospicare
+  steps:
+  - intent: hospicare
+  - action: utter_hospicare
+
+- story: diabetes_care_basic
+  steps:
+  - intent: diabetes_care_basic
+  - action: utter_diabetes_care_basic_qns
+  - intent: more_info
+  - action: utter_diabetes_care_basic
+  - intent: affirm
+  - action: utter_diabetes_care_basic
+  - intent: deny
+  - action: utter_ok
+  
+- story: diabetes_care_plus
+  steps:
+  - intent: diabetes_care_plus
+  - action: utter_diabetes_care_plus_qns
+  - intent: more_info
+  - action: utter_diabetes_care_plus
+  - intent: affirm
+  - action: utter_diabetes_care_plus
+  - intent: deny
+  - action: utter_diabetes_care_basic_qns
+
+- story: cardiac_care_basic
+  steps:
+  - intent: cardiac_care_basic
+  - action: utter_cardiac_care_basic_qns
+  - intent: more_info
+  - action: utter_cardiac_care_basic
+  - intent: affirm
+  - action: utter_cardiac_care_basic
+  - intent: deny
+  - action: utter_ok
+
+- story: cardiac_care_plus
+  steps:
+  - intent: cardiac_care_plus
+  - action: utter_cardiac_care_plus_qns
+  - intent: more_info
+  - action: utter_cardiac_care_plus
+  - intent: affirm
+  - action: utter_cardiac_care_plus
+  - intent: deny
+  - action: utter_cardiac_care_basic_qns
+
+- story: complete_health_solution
+  steps:
+  - intent: complete_health_solution
+  - action: utter_complete_health_solution_qns
+  - intent: more_info
+  - action: utter_complete_health_solution
+  - intent: affirm
+  - action: utter_complete_health_solution
+  - intent: deny
+  - action: utter_ok
+  
+- story: complete_health_solution_silver
+  steps:
+  - intent: complete_health_solution_silver
+  - action: utter_complete_health_solution_silver_qns
+  - intent: more_info
+  - action: utter_complete_health_solution_silver
+  - intent: affirm
+  - action: utter_complete_health_solution_silver
+  - intent: deny
+  - action: utter_complete_health_solution_qns
+  - intent: cheaper_option
+  - action: utter_complete_health_solution_qns
+  
+
+- story: complete_health_solution_platinum
+  steps:
+  - intent: complete_health_solution_platinum
+  - action: utter_complete_health_solution_platinum_qns
+  - intent: more_info
+  - action: utter_complete_health_solution_platinum
+  - intent: affirm
+  - action: utter_complete_health_solution_platinum
+  - intent: deny
+  - action: utter_complete_health_solution_silver_qns
+  - intent: cheaper_option
+  - action: utter_complete_health_solution_silver_qns
+
+- story: buy_insurance
+  steps:
+  - intent: buy_insurance
+  - action: utter_do_you_have_insurance
+  - intent: affirm
+  - action: utter_type_insurance
+  - intent: deny
+  - action: utter_aarogya_care
+  
