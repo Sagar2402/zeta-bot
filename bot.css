@@ -1,6 +1,7 @@
 body{
     height: 100vh;
     background-image: linear-gradient(to bottom right, #8693AB, #BDD4E7); 
+
 }
 
 .logo{
@@ -31,6 +32,7 @@ body{
 
 .chatroom .chats {
     background-color: black !IMPORTANT;
+
 }
 
 .chatroom .chats .time {
@@ -47,3 +49,14 @@ body{
     color: white !IMPORTANT;
 }
 
+
+.chatroom .chats .chat-buttons .chat-button {
+background-color: white  !IMPORTANT;
+border: 1px dashed rgb(92, 45, 144)  !IMPORTANT;
+color: rgb(92, 45, 144) !IMPORTANT;
+}
+
+.chatroom .chats .chat-buttons .chat-button:hover {
+    background-color: rgb(92, 45, 144)  !IMPORTANT;
+    color: white !IMPORTANT;
+}
