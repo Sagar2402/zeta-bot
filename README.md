@@ -1,4 +1,6 @@
 
+**Bringing together Bajaj Finserv’s products under a single navigation system. We aim for the chatbot to be a one stop solution for user queries, where users 
+with all intents and purposes can find a solution to their queries which also includes features such as interactive voice response to enhance communication.**
 
 *Bots Rise!*
 
@@ -44,6 +46,9 @@ Examples
 ![Screenshot](./screenshots/4.jpeg)
 
 ![Screenshot](./screenshots/5.jpeg)
+
+
+**We have implemented a full suite of IVR, i.e interactive voice response mode for the chatbot to enhance user communication and the UX. Customers can also speak and clear their doubt using the mic option instead of typing.**
 
 Thank you for testing our bot.
 
