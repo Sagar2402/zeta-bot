@@ -51,6 +51,6 @@ Thank you for testing our bot.
 
 Created by: 
 **Team Zeta**
-- Ishan Kumar  (https://github.com/Sagar2402)
+- Sagar Pathak  (https://github.com/Sagar2402)
 - Ishan Kumar  (https://github.com/ik159)
 - Shriti Chandra  (https://github.com/chandrashritii)
