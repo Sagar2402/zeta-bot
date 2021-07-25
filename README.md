@@ -6,7 +6,7 @@ with all intents and purposes can find a solution to their queries which also in
 
 Get your copy of the chatbot:
 
-     $ git clone https://github.com/HackRx2-0/ps9_zeta
+     $ git clone https://github.com/ik159/zeta-bot
 
 
 To fulfill minimum requirements, run the follwoing chain of commands which will test and upgrade all the packages needed to fire up your bot : 
