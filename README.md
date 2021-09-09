@@ -5,6 +5,9 @@ Created by:
 - Ishan Kumar  (https://github.com/ik159)
 - Shriti Chandra  (https://github.com/chandrashritii)
 
+Created For:
+**Bajaj Finserv's HackRX2.0**
+
 **Bringing together Bajaj Finserv’s products under a single navigation system. We aim for the chatbot to be a one stop solution for user queries, where users 
 with all intents and purposes can find a solution to their queries which also includes features such as interactive voice response to enhance communication.**
 
