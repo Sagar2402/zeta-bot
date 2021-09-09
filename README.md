@@ -1,4 +1,10 @@
 
+Created by: 
+**Team Zeta**
+- Sagar Pathak  (https://github.com/Sagar2402)
+- Ishan Kumar  (https://github.com/ik159)
+- Shriti Chandra  (https://github.com/chandrashritii)
+
 **Bringing together Bajaj Finserv’s products under a single navigation system. We aim for the chatbot to be a one stop solution for user queries, where users 
 with all intents and purposes can find a solution to their queries which also includes features such as interactive voice response to enhance communication.**
 
@@ -54,8 +60,4 @@ Thank you for testing our bot.
 
 
 
-Created by: 
-**Team Zeta**
-- Sagar Pathak  (https://github.com/Sagar2402)
-- Ishan Kumar  (https://github.com/ik159)
-- Shriti Chandra  (https://github.com/chandrashritii)
+
